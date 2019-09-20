@@ -263,7 +263,7 @@ p{
     line-height: 15px;
 }
 
-/* tamaño de la img */
+/* tamaño del logo en la seccion acerca de */
 .bio-info>img{
     width: 130px;
 }
@@ -285,10 +285,12 @@ p{
     font-size: 1.3em;
 }
 
+/* tamaño de los inputs de contacto*/
 .contact-form>input{
     font-size: 1.3em;
 }
 
+/* tamaño de la caja de texto*/
 .contact-form>textarea{
     font-size: 1.3em;
 }
@@ -375,6 +377,7 @@ footer>p{
 /* Pesonalizando estilo para tablets*/
 @media only screen and (min-width: 768px) {
   
+    /* ajustando la posicion de las publicaciones */
     .post ul {
         list-style: none;
         display: flex;
@@ -382,6 +385,7 @@ footer>p{
         justify-content: center;
     }
     
+    /* tamaño de cada publicacion */
     .post ul li {
         min-height: 350px;
         max-height: 3500px;
@@ -389,20 +393,23 @@ footer>p{
         flex: 1 0 300px;
     }
 
-
+    /* tamaño y margen de los logos*/
     .logo {
         width: 150px;
         margin: 1.5em;
     }
 
+    /*comportamiento de tipo bloque para el menu */
     .show-desktop {
         display: block;
     }
 
+    /*ocultando la opcion abrir menu que tienen los moviles  */
     .hide-desktop {
         display: none;
     }
 
+    /* propiedades y ajustes del menu */
     .menu {
         background-color: #112935; 
         position: static;
@@ -506,7 +513,7 @@ footer>p{
         font-size: 1.2em;
     }
 
-    /* moviendo la navigation bar a la derecha utilizando margen*/ 
+    /* moviendo la barra de navegacion a la derecha utilizando margen*/ 
     nav{
         box-sizing: border-box;
         margin-left: 35%;
@@ -537,18 +544,18 @@ footer>p{
         font-size: 1.5em;
     }
 
-    /* posicionando los iconos de github y twitter */
+    /* posicionando los iconos de */
     .social-links{
         box-sizing: content-box;
         margin: 1% 0% 2% ;
     }
     
-    /* separando los iconos de github y twitter*/ 
+    /* separando los iconos */ 
     .social-links li{
         margin: 0% 1.5%;
     }
 
-    /* tamaño de los iconos de github y twitter */ 
+    /* tamaño de los iconos */ 
     .social-links>li>a>i {
         font-size: 1.8em;
         display: flex;
@@ -635,32 +642,61 @@ footer>p{
 
 @media only screen and (min-width: 1440px) {
 
+    /* links del menu de color rojo al poner el cursos sobre ellos  */ 
     nav a:hover{ 
         color: red;
     }
 
+    /* adaptando los contenedores para pantallas de al menos 1440px*/
     .container {
         width: 80%;
         margin: 0 auto;
         max-width: 1440px;
     }
 
+    /* tamaño y margen superior de la imagen de usuario */ 
     .header img{
         margin-top: 2em;
         width: 180px;
     }
 
+    /* quitando el margen derecho al menu */
     .menu{
         margin-right: 0;
     }
 
+    /* aplicando margen izquiero para mover la barra de navegacion */
     nav{
         margin-left: 35%;
     }
 
+    /* tamaño de texto en los parrafos */
     .big-hero p{
         font-size: 1.3em;
         margin-top: 1%;
+    }
+
+    /* margen y padding de cada publicacion */
+    .post>ul>li{
+        margin: 1rem;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    /* tamaño del logo en acerca de */
+    .bio-info img{
+        width: 200px;
+        margin-top: 3%;
+    }
+
+    /* tamaño del texto*/
+    .bio-info p{
+        font-size: 18px;
+    }
+
+    /* tamaño de la caja de texto de la zona de contacto */
+    .contact-form>textarea{
+        font-size: 1em;
     }
 
     /* ajuste de sepacion del p en el footer con el fin de la pagina */
@@ -670,3 +706,38 @@ footer>p{
     
 }
 
+@media only screen and (min-width: 1920px){
+
+    /* adaptando los contenedores para pantallas de al menos 1920*/
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1920px;
+    }
+    /* tamaño del indice en la seccion de publicaciones */
+    .post>h2{
+        font-size: 1.3em;
+    }
+
+    /* margen en las publicaciones */
+    .post>ul>li{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    /* tamaño de la img de la seccion acerda de */
+    .bio-info>img{
+        width: 250px;
+        margin-bottom: 2%;
+    }
+
+    /* tamaño del texto en la seccion acerca de */
+    .bio-info>p{
+        font-size: 1em;
+    }
+
+    /* tamaño del indice en la seccion acerca de */
+    .about>.container>h2{
+        font-size: 1.3em;
+    }
+}
