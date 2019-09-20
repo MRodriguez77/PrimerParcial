@@ -95,25 +95,6 @@ p{
     font-size: 2.5em;
 }
 
-/* posicionando los iconos de github y twitter */
-.social-links{
-    box-sizing: content-box;
-    margin: 1% 0% 12% ;
-}
-
-/* separando los iconos de github y twitter*/ 
-.social-links li{
-    margin: 0% 2%;
-}
-
-/* tamaño de los iconos de github y twitter */ 
-.social-links>li>a>i {
-    font-size: 1.8em;
-    display: flex;
-    align-items: flex-start;
-}
-
-
 .green-area {
     background-color: #0AC693; 
 }
@@ -171,16 +152,6 @@ p{
     line-height: 25px;
 }
 
-/* margen a los lados de los articulos */ 
-.post ul li article{
-    margin: 2% 15%;
-}
-
-/* reduciendo el espacio entre lineas del texto en las publicaciones */
-.post article p{
-    line-height: 15px;
-}
-
 /* About */
 
 .about{
@@ -230,13 +201,75 @@ p{
     width: 100%;
 }
 
+/*   ---------------------------------------------------- mis cambios ------------------------------------------------------   */
+
+/* agregando margen izquierdo al logo naldana superior */
+.header img{
+    margin-left: 20%; 
+}
+
+/* ajustando tamaño de imagen user*/ 
+.container>img{
+    width: 100px;
+}
+
+.container h2{
+    font-size: 2em;
+}
+
+/* ajustando el tamaño del parrafo el borde y padding entre el texto y los sociaL media*/
+.container>p{
+    font-size: 1em;
+    box-sizing: border-box;
+    padding: 4px;
+    margin-bottom: 5%;
+    font-weight: 450;
+}
+
+/* posicionando los iconos de github y twitter */
+.social-links{
+    box-sizing: content-box;
+    margin: 1% 0% 12% ;
+}
+
+/* separando los iconos de github y twitter*/ 
+.social-links li{
+    margin: 0% 2%;
+}
+
+/* tamaño de los iconos de github y twitter */ 
+.social-links>li>a>i {
+    font-size: 1.8em;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* tamaño del texto de los parrafos en las publicaciones */
+.post>ul>li>article>p{
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
+/* espacio entre las publicaciones */ 
+.post>ul>li{
+    margin-top: 6%;
+    margin-bottom: 6%;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+/* reduciendo el espacio entre lineas del texto en las publicaciones */
+.post article p{
+    line-height: 15px;
+}
+
 /* tamaño de la img */
 .bio-info>img{
     width: 130px;
 }
 
 /* tamaño del h2*/
-.container h2{
+.post h2{
     font-size: 1.5em;
 }
 
@@ -252,12 +285,22 @@ p{
     font-size: 1.3em;
 }
 
+.contact-form>input{
+    font-size: 1.3em;
+}
+
+.contact-form>textarea{
+    font-size: 1.3em;
+}
+
 /* aplicando margen inferior al contenedor de contacto */ 
 .contact{
     margin-bottom: 10%;
     margin-left: 10%;
     margin-right: 10%;
 }
+
+/*   ---------------------------------------------------- hasta aqui ------------------------------------------------------   */
 
 /* Decorando placeholder */
 
@@ -369,16 +412,47 @@ footer>p{
         display: flex;
         margin-top: 1em;
     }
+/*   ---------------------------------------------------- mis cambios ------------------------------------------------------   */
+
+    /* ajustando tamaño de img user */
+    .header img{
+        margin-left: 40%;
+    }
+    /* quitando el margen superior del menu*/ 
+    .menu{
+        margin-top: 0;
+    }
+
+    /* colo rojo en el menu al pasar el mouse */ 
+    nav a:hover{   
+        color: red;
+    }
+
+    /* tamaño de la imagen */
+    .container img{
+        width: 140px;
+    }
+
+    /* ajustando el margen de los iconos de social link */
+    .social-links{
+        margin: 2% 0% 3%;
+    }
+
+    /* ajustando boton hacia abajo */
+    .show-desktop>i{
+        font-size: 3em;
+        margin-top: 1%;
+        margin-bottom: 3%;
+        color: #0AC693;
+
+    }
 
 
-
-
-    /*TODO: FALTA CSS */
+    
 } 
 
 @media only screen and (min-width: 1024px) {
 
-       /*TODO: FALTA CSS */
 
     /* alineando el contenido del header */
     .header{
@@ -392,22 +466,29 @@ footer>p{
         margin-left: 80%;
     }
 
-    /* moviendo la navigation bar a la derecha utiizando margen*/ 
+    .show-desktop>ul>li{
+        width: auto;
+    }
+
+    /* moviendo la navigation bar a la derecha utilizando margen*/ 
     nav{
         box-sizing: border-box;
         margin-left: 35%;
     }
     
-    /* ajustando el tamaño de los elementos de la nav */
-    nav>ul>li{
-        font-size: 1.8em;
-    }
-
     /* links de color rojo en la barra de navegacion */
     nav a:hover{   
         color: red;
     }
     
+    .container img{
+        width: 200px;
+    }
+
+    .big-hero h2{
+        font-size: 2em;
+    }
+
     /* ajustando el tamaño del area big-hero */
     .big-hero{
         margin: 4% 0% 5%;
@@ -442,10 +523,18 @@ footer>p{
         font-size: 3em;
         margin: 1% 0% ;
     }
+
+    /* tamaño de los titulos en la seccion de publicaciones */ 
+    .green-area h2{
+        font-size: 20px;
+    }
     
-    /* ajustando las publicaciones */
-    .post ul  {
-        
+    .post ul li{
+        margin: 1.5rem;
+    }
+
+    .post ul li article{
+        padding-bottom: 3em;
     }
 
     /* alineando los contenedores de "acerca de" */
@@ -457,7 +546,7 @@ footer>p{
     }
 
     /* alineando el titulo h2 */
-    .container>h2{
+    .about h2{
         grid-column: 1/3;
         grid-row: 1/1;
         font-size: 20px;
