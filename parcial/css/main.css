@@ -2,6 +2,8 @@
 
 /* El CSS siguiente esta pensando primero para moviles y luego para 
    Escritiorio*/
+
+/* pseudo-elemento que aplica 0 margen , 0 padding, modelo de caja y calcula el tamaño de cada elemento div uno despues del otro */
 *, ::before, ::after {
     margin: 0;
     padding: 0;
@@ -10,6 +12,8 @@
 }
 
 /* El estilo base para moviles */
+
+/*  colo base para la pagina color de letra familia de fuente alineacion y peso de la fuente  */ 
 body {
     background-color: #112935;
     color: white;
@@ -18,30 +22,36 @@ body {
     font-weight: 400;
 }
 
+/* alineacion del header */
 .header {
     display: flex;
     justify-content: space-between
 }
 
+/* mostrando la img de usuario */
 .src-only {
     display: none;
 }
 
+/* ocultando el menu de pantallas en mobiles  */
 .hide-mobile {
     display: none;
 }
 
+/* tamaño interlineado y paddin de lo parrafos */
 p{
     font-size: 0.75em;
     padding: 1rem;
     line-height: 25px;
 }
 
+/* tamaño y margen del logo */
 .logo {
     width: 100px;
     margin: 1em;
 }
 
+/* color, posicion, tamaño, alineacion display del menu, separacion superior, separacion derecha y posicionaminet de la opcion de menu para moviles */
 .options {
     color: inherit;
     text-decoration: none;
@@ -55,15 +65,20 @@ p{
     align-items: flex-start;
 
 }
+
+/* tamaño del icono de abrir menu que se aplica en moviles */
 .options i:last-child {
     font-size: 1.6rem;
 }
 
 /* Big area */
+
+/* tamaño de la imagen de usario */
 .big-hero img {
     width: 150px;
 }
 
+/* tamaño, peso, espaciado de letra y margen del indice */
 .big-hero h2 {
     font-size: 1.875em;
     font-weight: 700;
@@ -71,6 +86,7 @@ p{
     margin-top: 1em ;
 }
 
+/* tamaño, peso y color de la letra de parrafo*/
 .big-hero p {
     font-size: 0.7em;
     font-weight: 300;
@@ -79,6 +95,8 @@ p{
 }
 
 /* Social links*/
+
+/* quitando estilo de lista padding , aplicando margen superior y alineacion flex de los iconos de redes sociales */
 .social-links{
     list-style: none;
     padding: 0;
@@ -89,21 +107,25 @@ p{
 
 }
 
+/* color, tamaño y decoracion de los iconos de redes sociales */
 .social-links li a{
     color: #D7DEE6;
     text-decoration: none;
     font-size: 2.5em;
 }
 
+/* color del area de publicaciones */
 .green-area {
     background-color: #0AC693; 
 }
 
-
+/* padding y margen inferior del area de publicaciones */
 .post {
     padding: 1em;
     margin-bottom: -2px;
 }
+
+/* tamaño margen peso y aplicando mayuscula al indice del area de publicaiones */
 .post h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -111,40 +133,46 @@ p{
     margin: 1em;
 }
 
+/* quitando el estilo de lista de las publicaciones */
 .post ul {
     list-style: none;
 }
 
+/* altura minima, anchura maxima y margen de las publicaciones  */
 .post ul li {
     min-height: 300px;
     max-width: 350px;
     margin: 2rem auto;
 }
 
+/* color de fondo padding, aplicando redondeo del borde y alineando el texto de los articulos */
 .post ul li article {
-    overflow: hidden;
+    overflow: hidden;  /* El contenido es recortado y no se muestran barras de posición */
     border-radius: 10px;
     background-color: #ffffff;
     text-align: left;
     padding-bottom: 2em;
 }
 
+/* tamaño,altura y adaptando la imagen al espacio del articulo */
 .post article img{
     height: 150px;
     width: 100%;
     object-fit: cover;
 }
 
+/* color, margen superior, padding, tamaño, del indice de cada publicacion */
 .post article h3 {
     color: #0D5061;
     margin-top: 2em;
     padding: 0em 1rem;
     font-size: 0.9em;
-    white-space: nowrap;
+    white-space: nowrap; /* suprime saltos de linea del origen */ 
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; /* puntos suspencivos cuando no cabe una frase en el espacio asignado */
 }
 
+/* color, tamaño, padding e interlineado de la letra de los parrafos en los articulos */
 .post article p {
     color:#112935;
     font-size: 0.75em;
@@ -152,12 +180,15 @@ p{
     line-height: 25px;
 }
 
+
 /* About */
 
+/* margen superior de la seccion acerca de */
 .about{
     margin-top: 2em;
 }
 
+/* aplicando mayuscula, peso, tamaño de letra y margen del indice */
 .about h2 {
     text-transform: uppercase;
     font-weight: 700;
@@ -165,10 +196,12 @@ p{
     margin: 2em;
 }
 
+/* mañano de la imagen del area acerca de */
 .bio-info img{
    width: 200px;
 }
 
+/* tamaño, padding, alineacion, interlineado y espaciado de letras en los parrafos del area acerca de  */
 .bio-info p{
     font-size: 16px;
     padding: 2em;
@@ -177,6 +210,7 @@ p{
     letter-spacing: 2px;
 }
 
+/* alineacion flex, padding y alineacion de texto del contenedor de contacto */
 .contact {
     display: flex;
     flex-direction: column;
@@ -184,15 +218,18 @@ p{
     padding: 0px 1em;
 }
 
+/* margen superior de los elementos de la clase contact */
 .contact * + * {
     margin-top: 1.5em;
 }
 
+/* alineacion flex en columna del formulario de contacto */
 .contact-form {
     display: flex;
     flex-direction: column;
 }
 
+/* padding, quitando el borde, redondeando borde , tamaño , anchura de las cajas de texto */
 .contact-form input, .contact-form textarea{
     padding: 1rem 2rem;
     border: none;
@@ -213,6 +250,7 @@ p{
     width: 100px;
 }
 
+/* tamaño del indice de las clases contenedores */
 .container h2{
     font-size: 2em;
 }
@@ -250,7 +288,7 @@ p{
     font-weight: 400;
 }
 
-/* espacio entre las publicaciones */ 
+/* margen entre las publicaciones */ 
 .post>ul>li{
     margin-top: 6%;
     margin-bottom: 6%;
@@ -306,16 +344,21 @@ p{
 
 /* Decorando placeholder */
 
+/* pseudo-elemento que aplica color de los inputs en el area de acerca de */
 ::-webkit-input-placeholder { 
     color: #D7DEE6; 
 } 
- 
+
+/* pseudo-clase que aplica color a versiones de firexos de la 18 hacia atras */
 :-moz-placeholder { /* Firefox 18- */ color: #D7DEE6; } 
- 
+
+/* pseudo-clase que aplica color a versiones de firexos de la 19 en adelante */
 ::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } 
- 
+
+/* pseudo-clase que aplica color al explorador explorer */
 :-ms-input-placeholder { color: #D7DEE6; }
 
+/* color de fondo, peso de la letra, color de la letra y tamaño del boton enviar formulario  */
 .contact-form input[type=submit] {
     background-color: #F74442;
     font-weight: 400;
@@ -323,51 +366,61 @@ p{
     font-size: 1rem;
 }
 
+/* img de fondo */
 .black-decoration{
     background-image: url("../images/decoracion_oscura_small.svg");
 }
 
+/* color de fondo y color del texto de footer*/
 footer{
     background-color: #0D5061;
     color:#D7DEE6;
 }
 
+/* margen de los iconos de redes sociales del footer*/
 footer .social-links {
     margin: 0;
 }
 
+/* margen de los iconos de redes sociales en el footer */
 footer>ul.social-links>li{
     box-sizing: border-box;
     margin: 6% 4% 0%;
 }
 
+/* padding, tamaño y peso de la letra en los parrafos del footer */
 footer>p{
     padding-bottom: 5%;
     font-weight: 200;
     font-size: 9px;
 }
 
+/* color de fondo, espaciado superior , espaciado derecho, anchura del viewport , altura calculada del 100 viweport - 60 px,  */
 .menu {
     background-color: #112935;
     position: absolute;
-    z-index: 20;
+    z-index: 20;  /* determina que elementos cubren a otros */
     top: 60px;
     right: 0;
     width: 100vw;
     height: calc(100vh - 60px);
 }
 
+/* quitando el estilo de lista , alineadno a la izquierda, padding del menu */
 .menu {
     list-style: none;
     text-align: left;
     padding: 1em;
 }
+
+/* padding, margen superior y aplicando comportamiento de tipo bloque de cada elemento del menu */
 .menu li {
     display: block;
     padding: 0.5em;
     margin-top: 5px;
 }
 
+/* color y quitando las decoraciones de los enlaces del menu */
 .menu li a {
     color: white;
     text-decoration: none;
