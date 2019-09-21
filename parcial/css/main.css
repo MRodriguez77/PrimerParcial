@@ -719,10 +719,24 @@ footer>p{
         font-size: 1.3em;
     }
 
-    /* margen en las publicaciones */
+    /* margen t quitando padding en las publicaciones */
     .post>ul>li{
         margin-left: 5%;
         margin-right: 5%;
+        padding-left: 1%;
+        padding-right: 1%;
+
+    }
+
+    /* tamaño del indice de las publicaciones */
+    .post>ul>li>article>h3{
+        font-size: 1.1em;
+    }
+
+    /* tamaño de letra e interlineado en los parrrafos de las publicaciones */
+    .post>ul>li>article>p{
+        font-size: 0.9em;
+        line-height : 25px;
     }
 
     /* tamaño de la img de la seccion acerda de */
